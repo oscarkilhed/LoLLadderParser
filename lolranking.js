@@ -1,3 +1,5 @@
+//This mongo shell script performes a map reduce to enable some graphing of the rating distribution
+
 map = function(){
   emit({}, {list : [{ rating: this.rating - this.rating % 10, count: 1 }]})
 };
